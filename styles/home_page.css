@@ -1,0 +1,158 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700&display=swap');
+
+/* || RESET */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* || VARIABLES */
+:root{
+    /* ||COLORS */
+    --TEXT-COLOR: #fff;
+
+    /* ||FONTS */
+    --FF: 'Fugaz One', cursive;
+    --MAIN-TITLE-FONT: 5rem;
+    --TITLE-FONT: 3rem;
+    --TEXT-FONT: 1.5rem;
+}
+
+body {
+    text-transform: capitalize;
+    font-family: var(--FF);
+    letter-spacing: 1px;
+    color: var(--TEXT-COLOR);
+}
+
+.header {
+    background-image: url(../../Home_cinema/home_page_images/main_background.png);
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-attachment: fixed;
+}
+
+.header__title{
+
+    font-size: var(--MAIN-TITLE-FONT);
+}
+
+.header__text {
+    font-size: var(--TEXT-FONT);
+    padding-bottom: 250px;
+}
+
+.header__p {
+    padding: 20px;
+}
+
+.header__text,
+.header__title,
+.header__social-media {
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-timing-function: ease-in-out;
+    animation-name: title-animation;
+}
+
+.header__social-media {
+    position: absolute;
+    font-size: var(--TEXT-FONT);
+    padding-top: 20px;
+}
+
+.header__social-media a {
+    color: var(--TEXT-COLOR);
+}
+
+.header__social-media i {
+    padding-left: 20px;
+}
+
+.main {
+    background-image: url(../home_page_images/blurry-gradient-haikei.png);
+    background-size: cover;
+    display: flex;
+    padding: 250px;
+    justify-content: center;
+    width: 100%;
+}
+
+.main__movie {
+    padding: 50px;
+}
+
+
+.main img {
+    width: 20rem;
+    height: auto;
+    border-radius: 10px;
+}
+
+.main__movie:hover {
+    transition: 1s;
+    scale: 1.1;
+}
+
+.main__movie:hover .main__movie__info {
+    display: block;
+}
+
+.main__movie__info {
+    padding-top: 20px;
+    text-align: center;
+    display: none;
+} 
+
+
+
+@keyframes title-animation {
+    from {
+        transform: translateX(-300px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+@media (max-width: 576px) {
+    
+    body {
+        background-image: url(../home_page_images/blurry-gradient-haikei.png);
+        background-size: cover;
+        width: 100%;
+    }
+
+    .header {
+        background-image: url(../home_page_images/main_background_mobile.png);
+        width
+    }
+
+    .header__social-media {
+        padding-top: 15rem;
+     }
+
+    .main {
+        display: inline;
+        flex-direction: column;
+        background-size: cover;
+        background-image: none;
+    }
+
+    .main img {
+        display: flex;
+        width: 15rem;
+        margin: 0 auto;
+    }
+
+}
